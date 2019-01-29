@@ -8,7 +8,10 @@ class BurgerBuilder extends Component {
         return (
             <>
                 <Burger ingridients={this.props.ingridients} />
-                <BuildControls />
+                <BuildControls
+                    ingridients={this.props.ingridients}
+                    click={this.props.click}
+                />
             </>
         );
     }

@@ -9,10 +9,20 @@ const controls = [
     { label: 'Meat', type: 'meat' },
 ]
 
-const buildControls = () => {
+const buildControls = (props) => {
+    const ingridientsMap = props.ingridients;
+    const totalPrice = ingridientsMap.reduce((acc, item) => {
+        return acc + item.price * item.amount;
+    }, 0);
     return (
         <div className="buildControls">
-            {controls.map(item => <BuildControl key={item.label} label={item.label} />)}
+            <p><b> Current price: </b>{totalPrice.toFixed(2)}$</p>
+            {controls.map(item => <BuildControl
+                key={item.label}
+                label={item.label}
+                ingridients={props.ingridients}
+                click={props.click}
+            />)}
         </div>
     );
 }

@@ -3,58 +3,72 @@
     justify-content: space-between;
     align-items: center;
     margin: 5px 0;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    justify-content: flex-end;
 }
 
 .BuildControl button {
     display: block;
     font: inherit;
-    padding: 5px;
+    padding: 10px 20px;
     margin: 0 5px;
-    width: 80px;
-    border: 1px solid #AA6817;
+    width: 200px;
+    border: 0;
     cursor: pointer;
     outline: none;
 }
 
 .BuildControl button:disabled {
-    background-color: #AC9980;
-    border: 1px solid #7E7365;
-    color: #ccc;
-    cursor: default;
-}
-
-.BuildControl button:hover:disabled {
-    background-color: #AC9980;
-    color: #ccc;
-    cursor: not-allowed;
+    background-color: rgb(180, 180, 180);
 }
 
 .Label {
     padding: 10px;
-    font-weight: bold;
-    width: 80px;
+    /* font-weight: bold; */
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .BuildControl .Less {
-    background-color: #D39952;
+    background-color: #F9A03F;
     color: white;
-    flex: 1;
+}
+
+.Less:hover:enabled,
+.Less:hover:active {
+    opacity: 0.8;
+    color: white;
+}
+
+.Less:hover:disabled,
+.Less:hover:active {
+    opacity: 1;
+    color: white;
+    cursor: not-allowed;
+}
+
+.More:hover:disabled,
+.More:hover:active {
+    opacity: 1;
+    color: white;
+    cursor: not-allowed;
+}
+
+.More:hover:enabled,
+.More:hover:active {
+    opacity: 0.8;
+    color: white;
 }
 
 .BuildControl .More {
     background-color: #8F5E1E;
-    color: white;
-    flex: 1;
-}
-
-.BuildControl .Less:hover,
-.BuildControl .Less:active {
-    background-color: #DAA972;
-    color: white;
-}
-
-.BuildControl .More:hover,
-.BuildControl .More:active {
-    background-color: #99703F;
     color: white;
 }

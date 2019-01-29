@@ -4,23 +4,16 @@ import BurgerIngridients from "./BurgerIngridients/BurgerIngridients";
 
 const burger = (props) => {
     const values = props.ingridients;
-    let generateIngridients = Object.keys(values)
-        .map((key) => {
-            return [...Array(values[key])].map((_, i) => {
-                return <BurgerIngridients key={key + i} type={key} />
-            });
-        })
-        .reduce((arr, el) => {
-            return arr.concat(el);
-        }, []);
-
-    if (generateIngridients.length === 0) {
-        generateIngridients = <p>Add some ingridients!</p>
-    }
+    const arrayWithIngridients = [];
+    values.map((obj, index) => {
+        for (let i = 0; i < obj.amount; i++) {
+            arrayWithIngridients.push(<BurgerIngridients key={obj.name + index++} type={obj.name} />)
+        }
+    })
     return (
         <div className="container__burger-builder">
             <BurgerIngridients type="BreadTop" />
-            {generateIngridients}
+            {arrayWithIngridients.length === 0 ? <p><b>Add some ingridients!</b></p> : arrayWithIngridients}
             <BurgerIngridients type="BreadBottom" />
         </div>
     );
