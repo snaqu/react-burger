@@ -1,0 +1,42 @@
+.modal-list {
+    padding: 0 0 0 10px;
+}
+
+.modal-list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.modal-list__item p {
+    margin: 3px;
+}
+
+.modal-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.modal-block__btn {
+    margin: 10px;
+    height: 40px;
+    padding: 5px 25px;
+    background-color: #F9A03F;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.modal-block__btn--cancel {
+    background-color: #F9B061;
+}
+
+.modal-block__element {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}

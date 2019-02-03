@@ -11,6 +11,8 @@ class BurgerBuilder extends Component {
                 <BuildControls
                     ingridients={this.props.ingridients}
                     click={this.props.click}
+                    totalPrice={this.props.totalPrice}
+                    purchasing={this.props.purchasing}
                 />
             </>
         );

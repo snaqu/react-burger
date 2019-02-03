@@ -83,7 +83,7 @@
 }
 
 .Meat {
-    height: 70px;
+    height: 50px;
     max-width: 500px;
     width: 100%;
     background: linear-gradient(#7f3608, #702e05);
@@ -92,7 +92,7 @@
 }
 
 .Cheese {
-    height: 35px;
+    height: 25px;
     max-width: 500px;
     width: 100%;
     margin: 1% auto;
@@ -101,7 +101,7 @@
 }
 
 .Salad {
-    height: 25px;
+    height: 15px;
     max-width: 500px;
     width: 100%;
     margin: 1% auto;
@@ -110,7 +110,7 @@
 }
 
 .Bacon {
-    height: 20px;
+    height: 10px;
     max-width: 500px;
     width: 100%;
     background: linear-gradient(#bf3813, #c45e38);

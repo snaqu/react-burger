@@ -5,7 +5,7 @@ import BurgerIngridients from "./BurgerIngridients/BurgerIngridients";
 const burger = (props) => {
     const values = props.ingridients;
     const arrayWithIngridients = [];
-    values.map((obj, index) => {
+    values.forEach((obj, index) => {
         for (let i = 0; i < obj.amount; i++) {
             arrayWithIngridients.push(<BurgerIngridients key={obj.name + index++} type={obj.name} />)
         }

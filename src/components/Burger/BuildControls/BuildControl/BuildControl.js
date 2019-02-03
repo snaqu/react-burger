@@ -6,7 +6,7 @@ const buildControl = (props) => {
     let valueLess = false;
     let valueMore = false;
     let price = 0;
-    checkAmount.map(item => {
+    checkAmount.forEach(item => {
         if (item.name === props.label) {
             price = item.price;
         }
@@ -17,7 +17,6 @@ const buildControl = (props) => {
             valueMore = true;
         }
     })
-    console.log(checkAmount);
     return (
         <div className="BuildControl">
             <div className="Label">

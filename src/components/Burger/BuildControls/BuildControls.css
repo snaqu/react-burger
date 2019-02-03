@@ -6,5 +6,28 @@
     align-items: center;
     flex-flow: column;
     margin: auto;
-    padding: 40px 0;
+    padding: 40px 15px;
+}
+
+.buildControls--btn {
+    width: 210px;
+    height: 60px;
+    margin: 40px 0 20px 0;
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) .2s;
+    background-color: #CE6B31;
+}
+
+.buildControls--btn:hover {
+    background-color: #CE4B00;
+}
+
+.buildControls--btn:disabled {
+    background-color: rgb(180, 180, 180);
+    cursor: not-allowed;
 }
